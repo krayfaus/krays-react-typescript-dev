@@ -1,0 +1,77 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:react-hooks/recommended"
+  ],
+  "rules": {
+    // eslint.org/docs/rules/semi (enforce semicolon usage).
+    "semi": [
+      2,
+      "always"
+    ],
+    // eslint.org/docs/rules/max-len
+    "max-len": [
+      "warn",
+      {
+        "code": 120,
+        // "tabWidth": 2,
+        "ignoreUrls": true,
+        "ignoreStrings": true
+      }
+    ],
+    // eslint.org/docs/rules/sort-imports
+    "sort-imports": "warn",
+    // eslint.org/docs/rules/curly (brackets on everything).
+    "curly": [
+      "error",
+      "all"
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      },
+      "webpack": {
+        "config": "./webpack.config.js"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.ts",
+        "**/*.tsx"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "plugins": [
+        "@typescript-eslint"
+      ],
+      "extends": [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "rules": {
+        "@typescript-eslint/no-use-before-define": "warn",
+        "import/default": "off",
+        "import/no-unresolved": "off",
+        "no-use-before-define": "off",
+        "react/jsx-filename-extension": "off",
+        "camelcase": "off"
+      }
+    }
+  ]
+}
