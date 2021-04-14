@@ -1,3 +1,5 @@
+/* eslint-env es6 */
+/* eslint-disable no-console */
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
@@ -20,7 +22,7 @@ module.exports = {
         loader: 'ts-loader',
         exclude: /node_modules/,
         options: {
-          transpileOnly: true  // type checking now takes place in ForkTS plugin.
+          transpileOnly: true  // type checking now takes place in ForkTsCheckerWebpackPlugin.
         }
       }
     ]

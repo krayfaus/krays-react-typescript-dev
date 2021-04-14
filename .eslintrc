@@ -1,21 +1,12 @@
 {
   "root": true,
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "extends": [
-    "plugin:react-hooks/recommended"
-  ],
+  "env": { "browser": true, "node": true },
+  "extends": ["plugin:react-hooks/recommended"],
   "rules": {
     // eslint.org/docs/rules/semi (enforce semicolon usage).
-    "semi": [
-      2,
-      "always"
-    ],
+    "semi": [2, "always"],
     // eslint.org/docs/rules/max-len
-    "max-len": [
-      "warn",
+    "max-len": ["warn",
       {
         "code": 120,
         // "tabWidth": 2,
@@ -26,24 +17,12 @@
     // eslint.org/docs/rules/sort-imports
     "sort-imports": "warn",
     // eslint.org/docs/rules/curly (brackets on everything).
-    "curly": [
-      "error",
-      "all"
-    ]
+    "curly": ["error", "all"]
   },
   "settings": {
     "import/resolver": {
-      "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
-      },
-      "webpack": {
-        "config": "./webpack.config.js"
-      }
+      "node": { "extensions": [".js", ".jsx", ".ts", ".tsx"] },
+      "webpack": { "config": "./webpack.config.js" }
     }
   },
   "overrides": [
