@@ -1,1 +1,1 @@
-import './default-example';
+import './load-fonts';

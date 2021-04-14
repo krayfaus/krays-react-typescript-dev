@@ -7,6 +7,7 @@ const path = require('path');
 
 /** Returns the absolute path in relation to root directory.
  * @param {string} relativePath - self described.
+ * @returns {string} - the absolute path.
  */
 function getAbsolutePath(relativePath)
 {
